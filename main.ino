@@ -69,7 +69,6 @@ void check_gas_sensor() {
 void check_temp_sensor() {
   int tmp_sensorvalue = analogRead(TEMP_SENSOR); // Range 0 - 1023
   // to get scaled value for voltage, Analog Input MAX (5V)
-  // Alternative way with straight 3.3V # 3.3 / 5 / 1023 = 675.18
   float voltage = tmp_sensorvalue * 5 / 1023.0;
   // approximate temperature value, -40 temp low bound
   // -100 is voltage low bound and 0.1 is to get integer Celsius
